@@ -27,11 +27,11 @@ Then open <http://localhost:8000>.
 
 ## Local storage and backups
 
-Notes, folders, tags, and preferences are saved in this browser's local storage. Data does not sync to other devices. Clearing the browser's site data or removing its profile can erase the workspace.
+Notes, folders, tags, and preferences are saved in this browser's IndexedDB, with each note stored as its own record. Ink automatically migrates an existing localStorage workspace the first time the updated app opens. Data does not sync to other devices. Clearing the browser's site data or removing its profile can erase the workspace.
 
 To make a backup, open **Settings → Export JSON** and store the downloaded file somewhere safe. To restore or merge a backup, use **Settings → Import JSON**. Import validates the archive and adds its notes to the current workspace; conflicting note IDs are assigned new IDs. Markdown files can be imported from Settings as well.
 
-The application does not currently store binary attachments, provide cloud backups, or use IndexedDB. Browser storage capacity and retention depend on the browser.
+IndexedDB generally supports substantially larger workspaces than localStorage, but quotas and eviction behavior depend on the browser and available device storage. The app shows an approximate note-data size in Settings. Ink does not currently store binary attachments or provide cloud backups.
 
 ## Project structure
 
