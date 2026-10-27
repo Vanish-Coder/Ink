@@ -4,7 +4,7 @@
 
 ## Run Ink
 
-Open `index.html` in a modern desktop or mobile browser or simply use [this link](vanish-coder.github.io/Ink/). For local development, you can also serve the directory with any static file server, for example:
+Open `index.html` in a modern desktop or mobile browser or simply use [this link](https://vanish-coder.github.io/Ink/). For local development, you can also serve the directory with any static file server, for example:
 
 ```sh
 python3 -m http.server 8000
